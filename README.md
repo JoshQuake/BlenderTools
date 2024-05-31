@@ -1,6 +1,3 @@
-<p align="center">
-  <img width="300" src="https://github.com/JoshQuake/BlenderTools/blob/main/docs/main/images/1.png?raw=true" alt="icon"/>
-</p>
 <h1 align="center">Blender Tools</h1>
 <br></br>
 
@@ -46,3 +43,7 @@ Never miss a new addon release! Do this:
 You will now get an email notification everytime there is a new version of an addon released.
 
 
+## Support Me on Kofi
+If you have a few loonies or toonies laying around and would like to support my efforts, I have a Kofi!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E3VWL1V)
