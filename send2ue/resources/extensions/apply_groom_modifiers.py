@@ -3,8 +3,6 @@ from send2ue.core import utilities
 from send2ue.constants import ToolInfo
 from send2ue.core.extension import ExtensionBase
 
-hair_object_copies = []
-
 # Get or create temp collection (necessary?) 
 def get_temp_collection(collection_name="GroomTempCollection"):
     if collection_name in bpy.data.collections:
@@ -15,21 +13,16 @@ def get_temp_collection(collection_name="GroomTempCollection"):
     
     return temp_collection
 
-# make copies of original objects, link to temp collection, and store for removal later
-# Now that I think about it, storing isn't necessary since I can just grab objects from temp collection
-# I will change later - JoshQuake
+# make copies of original objects, link to temp collection
 def apply_groom_modifiers():
     properties = bpy.context.scene.send2ue
     hair_objects = utilities.get_hair_objects(properties)
     temp_collection = get_temp_collection()
 
-    hair_object_copies.clear()
-
     for hair_object in hair_objects:
         hair_copy = hair_object.copy()
         hair_copy.data = hair_object.data.copy()
         temp_collection.objects.link(hair_copy)
-        hair_object_copies.append(hair_copy)
 
         for modifier in hair_object.modifiers:
             bpy.context.view_layer.objects.active = hair_object
@@ -41,8 +34,9 @@ def apply_groom_modifiers():
 def restore_groom_modifiers():
     temp_collection = get_temp_collection()
     export_collection = bpy.data.collections.get(ToolInfo.EXPORT_COLLECTION.value)
+    hair_copies = temp_collection.all_objects
 
-    for hair_copy in hair_object_copies:
+    for hair_copy in hair_copies:
         original_name = hair_copy.name.split(".")[0]
         modified_hair_object = bpy.data.objects.get(original_name)
         if modified_hair_object:
@@ -51,7 +45,6 @@ def restore_groom_modifiers():
             temp_collection.objects.unlink(hair_copy)
             hair_copy.name = original_name
 
-    hair_object_copies.clear()
     bpy.data.collections.remove(temp_collection)
 
 class ApplyGroomModifiersExtension(ExtensionBase):
