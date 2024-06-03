@@ -3,7 +3,7 @@
   "show_in_front": false
  },
  "armature": {
-  "show_bone_colors": true,
+  "show_group_colors": true,
   "show_names": false,
   "show_bone_custom_shapes": true
  },
