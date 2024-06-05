@@ -12,6 +12,11 @@ A one-click solution for sending assets from Blender to Unreal Engine.
 * [Read Docs](https://joshquake.github.io/BlenderTools/send2ue/)
 * [Download Addon](https://github.com/JoshQuake/BlenderTools/releases?q=Send+to+Unreal&expanded=true)
 
+|Blender Build|Supported Version|
+|------------:|------------|
+| 4.0+        |[Latest](https://github.com/JoshQuake/BlenderTools/releases/latest)|
+| 3.6         |[2.4.3](https://github.com/EpicGamesExt/BlenderTools/releases/tag/20231109043947)|
+
 
 ## UE to Rigify
 
@@ -23,6 +28,11 @@ new animation on unreal marketplace assets and more!
 
 * [Read Docs](https://joshquake.github.io/BlenderTools/ue2rigify/)
 * [Download Addon](https://github.com/JoshQuake/BlenderTools/releases?q=UE+to+Rigify&expanded=true)
+
+|Blender Build|Supported Version|
+|------------:|------------|
+| 4.0+        |Not supported|
+| 3.6         |[1.6.2](https://github.com/JoshQuake/BlenderTools/releases/tag/20240525035436)|
 
 
 ## Help Contribute
