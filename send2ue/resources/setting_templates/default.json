@@ -66,6 +66,9 @@
   "export_custom_property_fcurves": true,
   "export_object_name_as_root": true,
   "extensions": {
+    "applygroommodifiers": {
+      "apply_groom_mods": true
+    },
     "affixes": {
       "animation_sequence_name_affix": "Anim_",
       "auto_add_asset_name_affixes": false,
