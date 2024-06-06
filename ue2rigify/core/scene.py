@@ -1343,16 +1343,6 @@ def load_metadata(properties):
         for attribute, value in visual_data.get('armature', {}).items():
             setattr(rig_object.data, attribute, value)
 
-        # set the bone groups
-        for bone_group_name, bone_group_data in visual_data.get('bone_groups', {}).items():
-            bone_group = rig_object.pose.bone_groups.get(bone_group_name)
-            if not bone_group:
-                bone_group = rig_object.pose.bone_groups.new(name=bone_group_name)
-            bone_group.color_set = bone_group_data['color_set']
-            bone_group.colors.active = bone_group_data['colors']['active']
-            bone_group.colors.normal = bone_group_data['colors']['normal']
-            bone_group.colors.select = bone_group_data['colors']['select']
-
         # set the bone attributes
         for bone_name, bone_data in visual_data.get('bones', {}).items():
             bone = rig_object.pose.bones.get(bone_name)
@@ -1369,12 +1359,6 @@ def load_metadata(properties):
                 bone.custom_shape_scale_xyz = custom_shape_data['scale']
                 bone.use_custom_shape_bone_size = custom_shape_data['use_bone_size']
 
-            # set the bone group
-            bone_group = rig_object.pose.bone_groups.get(bone_data.get('bone_group', ''))
-            if bone_group:
-                bone.bone_group = bone_group
-
-
 def save_metadata(properties):
     """
     Saves the rigify visual metadata when in control mode, like custom bone shape widgets and bone group colors.
@@ -1389,12 +1373,12 @@ def save_metadata(properties):
                     'show_in_front': rig_object.show_in_front
                 },
                 'armature': {
-                    'show_group_colors': rig_object.data.show_group_colors,
+                    'show_bone_colors': rig_object.data.show_bone_colors,
                     'show_names': rig_object.data.show_names,
                     'show_bone_custom_shapes': rig_object.data.show_bone_custom_shapes
                 },
                 'bones': {},
-                'bone_groups': {}
+                'bone_colors': {}
             }
 
             # save the bone settings
@@ -1410,23 +1394,9 @@ def save_metadata(properties):
                         'scale': bone.custom_shape_scale_xyz[:],
                         'use_bone_size': bone.use_custom_shape_bone_size
                     }
-                # save bone group
-                if bone.bone_group:
-                    bone_data['bone_group'] = bone.bone_group.name
 
                 if bone_data:
                     visual_data['bones'][bone.name] = bone_data
-
-            # save the bone_groups
-            for bone_group in rig_object.pose.bone_groups:
-                visual_data['bone_groups'][bone_group.name] = {
-                    'color_set': bone_group.color_set,
-                    'colors': {
-                        'normal': bone_group.colors.normal[:],
-                        'select': bone_group.colors.select[:],
-                        'active': bone_group.colors.active[:],
-                    }
-                }
 
             file_path = templates.get_template_file_path(f'{Modes.CONTROL.name.lower()}_metadata.json', properties)
             templates.save_json_file(visual_data, file_path)
