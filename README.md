@@ -54,6 +54,6 @@ You will now get an email notification everytime there is a new version of an ad
 
 
 ## Support Me on Kofi
-If you have a few loonies or toonies laying around and would like to support my efforts, I have a Kofi!
+If you have a few loonies or toonies laying around and would like to support my efforts, may I please have a CoffeeCrisp? 😊
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E3VWL1V)
