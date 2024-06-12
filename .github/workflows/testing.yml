@@ -33,6 +33,7 @@ jobs:
         pip install --upgrade -r requirements.txt
         
     - name: Run Tests
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIT_USER: ${{ github.repository_owner }}
