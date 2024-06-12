@@ -20,7 +20,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        set-safe-directory: 'C:\action-runner\_work\BlenderTools\BlenderTools'
+        set-safe-directory: 'C:\action-runner\*'
         
     - name: Set up Python
       uses: actions/setup-python@v4
