@@ -4,6 +4,7 @@ on:
   push:
     branches: [ 'repo-automatedtests' ]
     paths: [ 'send2ue/**/*','ue2rifigy/**/*','tests/**/*']
+    
 
 permissions:
   contents: read
@@ -47,4 +48,4 @@ jobs:
         require_tests: True
         require_passed_tests: True
         include_passed: True
-        detailed_summary: True 
+        detailed_summary: True
