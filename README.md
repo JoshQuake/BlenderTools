@@ -2,7 +2,7 @@
 <br></br>
 
 A repository of blender addons that improve the game development workflow between Blender and Unreal Engine.
-These tools were formerly created by [Epic Games](https://github.com/EpicGamesExt/BlenderTools). Now maintained by @JoshQuake with credited community contributions.
+These tools were formerly created by [Epic Games](https://github.com/EpicGamesExt/BlenderTools). Now maintained by [@JoshQuake](https://github.com/JoshQuake) with <b>credited</b> community contributions.
 
 ## Send to Unreal
 
