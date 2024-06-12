@@ -40,7 +40,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run Tests
-      shell: bash
       run: |
         cd ./tests
         python run_tests.py
