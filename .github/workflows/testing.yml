@@ -34,11 +34,8 @@ jobs:
         
     - name: Run Tests
       shell: bash
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GIT_USER: ${{ github.actor }}
       run: |
-        echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo ${{ github.token }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v4
