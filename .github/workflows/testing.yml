@@ -42,7 +42,8 @@ jobs:
     - name: Run Tests
       shell: bash
       run: |
-        echo "hello"
+        cd ./tests
+        python run_tests.py
 
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v4
