@@ -14,7 +14,7 @@ permissions:
 jobs:
   test:
     name: Test
-    runs-on: joshquake-runner
+    runs-on: self-hosted
     timeout-minutes: 120
     
     steps:
