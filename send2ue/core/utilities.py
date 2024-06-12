@@ -19,7 +19,7 @@ def track_progress(message='', attribute=''):
     """
     A decorator that makes its wrapped function a queued job.
 
-    :param str message: A the progress message..
+    :param str message: A the progress message...
     :param str attribute: The asset attribute to use in as the message.
     """
 
