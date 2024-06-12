@@ -47,4 +47,4 @@ jobs:
         require_tests: True
         require_passed_tests: True
         include_passed: True
-        detailed_summary: True
+        detailed_summary: True 
