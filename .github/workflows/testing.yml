@@ -2,7 +2,7 @@ name: Testing
 
 on:
   push:
-    branches: [ 'main' ]
+    branches: [ 'main', 'repo-automatedtests' ]
     paths: [ 'send2ue/**/*','ue2rifigy/**/*','tests/**/*']
 
 permissions:
