@@ -2,6 +2,7 @@
 <br></br>
 
 A repository of blender addons that improve the game development workflow between Blender and Unreal Engine.
+These tools were formerly created by [Epic Games](https://github.com/EpicGamesExt/BlenderTools). Now maintained by @JoshQuake with credited community contributions.
 
 ## Send to Unreal
 
@@ -51,9 +52,5 @@ Never miss a new addon release! Do this:
 1. Click `Apply`.
 
 You will now get an email notification everytime there is a new version of an addon released.
-
-
-## Support Me on Kofi
-If you have a few loonies or toonies laying around and would like to support my efforts, may I please have a CoffeeCrisp? 😊
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E3VWL1V)
