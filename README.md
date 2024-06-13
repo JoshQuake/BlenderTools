@@ -1,3 +1,7 @@
+## THESE TOOLS HAVE A NEW HOME. PLEASE VISIT THE NEW FORK
+[Poly-Hammer/BlenderTools](https://github.com/poly-hammer/BlenderTools)
+
+<br><br>
 <h1 align="center">Blender Tools</h1>
 <br></br>
 
